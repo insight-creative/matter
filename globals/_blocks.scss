@@ -1,0 +1,14 @@
+.block {
+    padding: 5% 0;
+    padding: clamp($ic-400, 10%, $ic-900) 0;
+}
+
+.block-sm {
+    padding: $ic-300 0;
+}
+
+.block-md {
+    padding: 3% 0;
+    padding: clamp($ic-300, 5%, $ic-600) 0;
+}
+  

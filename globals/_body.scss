@@ -1,0 +1,57 @@
+* {
+  box-sizing: border-box;
+  max-width: $measure;
+}
+
+html,
+body,
+div,
+section,
+picture,
+header,
+nav,
+main,
+footer,
+table,
+.max-width-none {
+  max-width: none;
+}
+
+body {
+  font-family: $primary-font;
+  color: $black;
+}
+
+:focus {
+  outline: 2px dashed get-color("primary");
+  outline-offset: 0.25rem;
+}
+
+main:focus {
+  outline: none;
+}
+
+.site-main {
+  position: relative;
+  margin-top: $mobile-header;
+
+  @include breakpoint(md) {
+    margin-top: $desktop-header;
+  }
+}
+
+// Style highlight to match our themes colors
+::-moz-selection {
+  background: rgba($primary-color, 0.8);
+  color: $white;
+}
+
+::selection {
+  background: rgba($primary-color, 0.8);
+  color: $white;
+}
+
+::-ms-selection {
+  background: rgba($primary-color, 0.8);
+  color: $white;
+}

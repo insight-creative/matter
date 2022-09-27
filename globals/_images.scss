@@ -1,0 +1,61 @@
+img,
+iframe {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+
+.layout-center-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-wrap {
+  position: relative;
+  height: 100%;
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: block;
+
+  img {
+    object-fit: cover;
+    height: auto;
+    width: 100%;
+    position: relative;
+
+    @include breakpoint(md) {
+      height: 100%;
+    }
+  }
+}
+
+.cover-image {
+  width: 100%;
+  display: block;
+  overflow: hidden;
+
+  img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.cover {
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+figure {
+  margin: 0;
+}

@@ -1,0 +1,10 @@
+.flex-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $ic-300;
+  margin-top: $ic-300;
+
+  img {
+    flex: 1 1 200px;
+  }
+}

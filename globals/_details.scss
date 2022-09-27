@@ -1,0 +1,10 @@
+details {
+    border: 1px solid $light-gray;
+    border-radius: $radius;
+    padding: $ic-100;
+    cursor: pointer;
+
+    summary::marker {
+        color: $primary-color;
+    }
+}

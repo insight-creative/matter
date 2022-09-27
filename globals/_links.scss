@@ -1,0 +1,47 @@
+a, .simple-link {
+  color: $primary-color;
+  transition: 0.3s ease;
+
+  &:hover,
+  &:focus {
+    color: $secondary-color;
+    outline-color: $secondary-color;
+  }
+}
+
+.site-main a:not(.btn) {
+  color: $primary-color;
+  text-decoration: none;
+  background-image: linear-gradient($accent-color, $accent-color),linear-gradient(270deg,$primary-color 0%,$primary-color 100%);
+  background-size: 100% 2px,0 2px;
+  background-position: 100% 100%,0 100%;
+  background-repeat: no-repeat;
+  transition: background-size $transition,background-position $transition,color $transition;
+
+  &:hover,
+  &:focus {
+    background-size: 0 2px,100% 2px;
+    background-position: 100% 100%,0 100%;
+    text-decoration: none;
+  }
+}
+
+.decorated-link {
+  text-decoration: none;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    content: "";
+    background-color: $accent-color;
+    height: 2px;
+  }
+}
+
+.no-decoration {
+  text-decoration: none;
+}
+
