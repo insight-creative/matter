@@ -11,9 +11,28 @@ Building complex components from a set of utility classes. This SCSS framework l
 The goal is to reduce decision-making friction, by having a set of pre-defined utility classes we can focus on higher-order problems while increasing quality and consistency for Insight Creative’s customers.
 
 ## Table of contents
-[Design tokens](#design-tokens)
-[Breakpoints](#breakpoints)
-  [Implementing breakpoints](#implmenting-breakpoints)
+- [matter](#matter)
+  - [Utility-First Fundamentals](#utility-first-fundamentals)
+  - [Table of contents](#table-of-contents)
+  - [Design tokens](#design-tokens)
+      - [Variables for visual consistency across platforms.](#variables-for-visual-consistency-across-platforms)
+  - [Breakpoints](#breakpoints)
+    - [Implementing breakpoints](#implementing-breakpoints)
+  - [Colors](#colors)
+    - [Accessibility](#accessibility)
+      - [Text styling](#text-styling)
+      - [Avoid using color exclusively](#avoid-using-color-exclusively)
+  - [Customizing your theme](#customizing-your-theme)
+  - [Scale and rhythm](#scale-and-rhythm)
+  - [Blocks](#blocks)
+  - [Wrappers](#wrappers)
+  - [Margin and padding](#margin-and-padding)
+  - [Typography](#typography)
+    - [Headings sizes](#headings-sizes)
+    - [How to use it:](#how-to-use-it)
+    - [Body sizes](#body-sizes)
+    - [How to use it:](#how-to-use-it-1)
+  - [Adding Custom Styles](#adding-custom-styles)
 
 ## Design tokens
 #### Variables for visual consistency across platforms.
@@ -55,7 +74,7 @@ $ic-300: 1rem * $scale * $scale;
 | lg            | 75em           | 1200px          |
 | xl            | 112.5em        | 1800px          |
 
-### Implmenting breakpoints
+### Implementing breakpoints
 
 ```
 .my-item {
@@ -77,7 +96,7 @@ $ic-300: 1rem * $scale * $scale;
 
 ## Colors
 
-As seen above in the Customizing your theme section, colors are stored in SCSS variables. Use these as a base but add as many brand colors as you may need for your project.
+You will see in the Customizing your theme section below, colors are stored in SCSS variables. Use these as a base but add as many brand colors as you may need for your project.
 
 ```
 // Colors
