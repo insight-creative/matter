@@ -10,7 +10,7 @@ Building complex components from a set of utility classes. This SCSS framework l
 
 The goal is to reduce decision-making friction, by having a set of pre-defined utility classes we can focus on higher-order problems while increasing quality and consistency for Insight Creative’s customers.
 
-<h2>Table of contents</h2>
+Table of contents
 - [Design tokens](#design-tokens)
     - [Variables for visual consistency across platforms.](#variables-for-visual-consistency-across-platforms)
 - [Breakpoints](#breakpoints)
