@@ -1,43 +1,42 @@
-# matter
+<h1>Matter</h1>
 
 A utility-first SCSS framework with substance.
 
 Matter is a small utility-first SCSS framework for projects at Insight Creative, Inc. This is packed with classes like flex, pt-4, and text-center that can be composed to build any design, directly in your markup. Similar to frameworks like Tailwind, Bootstrap, and Tachyons but with only the utility classes that we actually use and need.
 
-## Utility-First Fundamentals
+<h2>Utility-First Fundamentals</h2>
 
 Building complex components from a set of utility classes. This SCSS framework leans on small, tersely named, single-purpose classes that are combined in the HTML to build up UIs. This approach can speed development time, reduce complexity, and increase consistency by limiting, and in some cases eliminating, the need to author new CSS.
 
 The goal is to reduce decision-making friction, by having a set of pre-defined utility classes we can focus on higher-order problems while increasing quality and consistency for Insight Creative’s customers.
 
-## Table of contents
-- [matter](#matter)
-  - [Utility-First Fundamentals](#utility-first-fundamentals)
-  - [Table of contents](#table-of-contents)
-  - [Design tokens](#design-tokens)
-      - [Variables for visual consistency across platforms.](#variables-for-visual-consistency-across-platforms)
-  - [Breakpoints](#breakpoints)
-    - [Implementing breakpoints](#implementing-breakpoints)
-  - [Colors](#colors)
-    - [Accessibility](#accessibility)
-      - [Text styling](#text-styling)
-      - [Avoid using color exclusively](#avoid-using-color-exclusively)
-  - [Customizing your theme](#customizing-your-theme)
-  - [Scale and rhythm](#scale-and-rhythm)
-  - [Blocks](#blocks)
-  - [Wrappers](#wrappers)
-  - [Margin and padding](#margin-and-padding)
-  - [Typography](#typography)
-    - [Headings sizes](#headings-sizes)
-    - [How to use it:](#how-to-use-it)
-    - [Body sizes](#body-sizes)
-    - [How to use it:](#how-to-use-it-1)
-  - [Adding Custom Styles](#adding-custom-styles)
+<h2>Table of contents</h2>
+- [Design tokens](#design-tokens)
+    - [Variables for visual consistency across platforms.](#variables-for-visual-consistency-across-platforms)
+- [Breakpoints](#breakpoints)
+  - [Implementing breakpoints](#implementing-breakpoints)
+- [Colors](#colors)
+  - [Accessibility](#accessibility)
+    - [Text styling](#text-styling)
+    - [Avoid using color exclusively](#avoid-using-color-exclusively)
+- [Customizing your theme](#customizing-your-theme)
+- [Scale and rhythm](#scale-and-rhythm)
+- [Blocks](#blocks)
+- [Wrappers](#wrappers)
+- [Margin and padding](#margin-and-padding)
+  - [Margin](#margin)
+  - [Padding](#padding)
+- [Typography](#typography)
+  - [Headings sizes](#headings-sizes)
+  - [How to use it:](#how-to-use-it)
+  - [Body sizes](#body-sizes)
+  - [How to use it:](#how-to-use-it-1)
+- [Adding Custom Styles](#adding-custom-styles)
 
 ## Design tokens
 #### Variables for visual consistency across platforms.
 
-Design tokens power the visual building blocks of Matter. Values for colors, type, and breakpoints, among many others, are stored in a simple format of SCSS variables that can then be used to create consistency throughout your project.
+Design tokens power the visual building blocks of Matter. Values for colors, scale, and fonts, are stored in a simple format of SCSS variables that can then be used to create consistency throughout your project.
 
 Because tokens are our “single source of truth”, changes are only made in one place. This way you don't need to update every instance of a color for example. Update that color variable once and watch it immediately take effect throughout your entire project.
 
@@ -215,13 +214,87 @@ Wrappers are almost always paired with our blocks to wrap our content and ensure
 
 ## Margin and padding
 
+Margin and padding can be applied to elements using a variety of pre-defined utility class with margins and paddings set to match our rhythmic scale. All margin and padding classes follow the same naming convention.
+
+| Name          | Output         |
+| ------------- |:--------------:|
+| mt            | margin-top     |
+| mr            | margin-right   |
+| mb            | margin-bottom  |
+| ml            | margin-left    |
+
+Margin and padding classes based on our rhythmic scale:
+
+### Margin
+
+```
+.mt-1 {
+  margin-top: $ic-100;
+}
+
+.mt-2 {
+  margin-top: $ic-200;
+}
+
+.mt-3 {
+  margin-top: $ic-300;
+}
+
+...
+
+.mt-9 {
+  margin-top: $ic-900;
+}
+
+.mt-10 {
+  margin-top: $ic-1000;
+}
+```
+
+### Padding
+
+```
+.pt-1 {
+  padding-top: $ic-100;
+}
+
+.pt-2 {
+  padding-top: $ic-200;
+}
+
+.pt-3 {
+  padding-top: $ic-300;
+}
+
+...
+
+.pt-9 {
+  padding-top: $ic-900;
+}
+
+.pt-10 {
+  padding-top: $ic-1000;
+}
+```
+
+How to use:
+
+```
+<div class="block">
+   <div>...</div>
+   <div class="ml-6">...</div>
+</div>
+```
+
 ## Typography
+
+A small number of text options based on our typography scale.
 
 ### Headings sizes
 
-A small number of text options based on a typography scale. The typography scale classes are based on design rather than HTML tags, decoupling HTML semantics from the style. This allows developers to choose the correct tag which adds semantic value rather than selecting based on the styles associated with the tag.
+The typography scale classes are based on design rather than HTML tags, decoupling HTML semantics from the style. This allows developers to choose the correct tag which adds semantic value rather than selecting based on the styles associated with the tag.
 
-Each heading level is defined with an associated class name. This way we can style an h3 like an h1 without breaking HTML semantics in our HTML markup.
+Each heading level is defined with an associated class name. This way we can style an h3 like an h1 without using an <h1></h1> and break HTML semantics in our HTML markup.
 
 ### How to use it:
 
@@ -239,7 +312,7 @@ h1,
 
 ### Body sizes
 
-Font size utility classes that are based on a typograophy scale
+Font size utility classes that are based on a typography scale
 
 ```
 .fs-100 {
