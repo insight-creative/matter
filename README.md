@@ -56,12 +56,12 @@ $white: #ffffff;
 ```
 // Scale and rhythm based on a major third. A simple system to encourage visual rhythm.
 $scale: 1.25;
+```
 
-$ic--200: 1rem / $scale / $scale;
-$ic--100: 1rem / $scale;
-$ic-100: 1rem;
-$ic-200: 1rem * $scale;
-$ic-300: 1rem * $scale * $scale;
+```
+// Fonts
+$primary-font: 'Montserrat', serif;
+$secondary-font: 'Montserrat', serif;
 ```
 
 ## Breakpoints
@@ -150,12 +150,6 @@ $white: #ffffff;
 ```
 // Scale and rhythm based on a major third
 $scale: 1.25;
-
-$ic--200: 1rem / $scale / $scale;
-$ic--100: 1rem / $scale;
-$ic-100: 1rem;
-$ic-200: 1rem * $scale;
-$ic-300: 1rem * $scale * $scale;
 ```
 
 ## Scale and rhythm
@@ -188,7 +182,7 @@ $ic-1000: 1rem * $scale * $scale * $scale * $scale * $scale * $scale * $scale * 
 
 Main sections on our websites, usualy content containers. Often also referred in other systems as .box .page-blocks .panel .info-box etc ...
 
-Blocks are the building blocks of all core sections of a website. These blocks utilize our scale variables wrapped in a clamp() function to set a minimum value, a preferred value, and a maximum allowed value.
+Blocks are the building blocks of all core sections of a website. These blocks utilize our scale variables wrapped in a clamp() function to set a minimum value, a preferred value, and a maximum allowed value creating equal top and bottom padding.
 
 ```
 .block {
@@ -197,11 +191,36 @@ Blocks are the building blocks of all core sections of a website. These blocks u
 }
 ```
 
+How to use it: 
+
+```
+<div class="block">
+    <h2>Section Heading</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+</div>
+```
+
 ## Wrappers
 
 Elements for wrapping general layout. Often also referred in other systems as .container .inner .outer .row etc ...
 
-Wrappers are almost always paired with our blocks to wrap our content and ensure we constrain our layouts to some sort of maximum width.
+Wrappers are almost always paired with our blocks to wrap our content. Wrappers allow you to specify a class that is 100% wide until the specified max-width is reached, after which we constrain that wrapper for each of the higher breakpoints. For example, .wrapper-sm is 100% wide to start until the max-width of 48rem is reached.
+
+Wrapper should always be placed within our blocks to wrap our inner content.
+
+Matter has 5 different wrapper sizes that can be used
+
+```
+|               | Small > 600px | Medium > 992px | Large > 1200px | Extra Large > 1800px |
+| ------------- |:-------------:| --------------:| --------------:| --------------------:|
+| .wrapper-sm   | 100%          | 768px          | 768px          | 768px                |
+| .wrapper      | 100%          | 100%           | 1008px         | 1008px               |
+| .wrapper-md   | 100%          | 100%           | 100%           | 1280px               |
+| .wrapper-lg   | 100%          | 100%           | 100%           | 1600px               |
+| .wrapper-xl   | 100%          | 100%           | 100%           | 1920px               |
+```
+
+CSS
 
 ```
 .wrapper {
@@ -212,9 +231,20 @@ Wrappers are almost always paired with our blocks to wrap our content and ensure
 }
 ```
 
+How to use it:
+
+```
+<div class="block">
+    <div class="wrapper">
+        <h2>Section Heading</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+</div>
+```
+
 ## Margin and padding
 
-Margin and padding can be applied to elements using a variety of pre-defined utility class with margins and paddings set to match our rhythmic scale. All margin and padding classes follow the same naming convention.
+Margin and padding can be applied to elements using a variety of pre-defined utility class with margin and padding set to match our rhythmic scale. All margin and padding classes follow the same naming convention.
 
 | Name          | Output         |
 | ------------- |:--------------:|
@@ -234,10 +264,6 @@ Margin and padding classes based on our rhythmic scale:
 
 .mt-2 {
   margin-top: $ic-200;
-}
-
-.mt-3 {
-  margin-top: $ic-300;
 }
 
 ...
@@ -260,10 +286,6 @@ Margin and padding classes based on our rhythmic scale:
 
 .pt-2 {
   padding-top: $ic-200;
-}
-
-.pt-3 {
-  padding-top: $ic-300;
 }
 
 ...
@@ -323,11 +345,11 @@ Font size utility classes that are based on a typography scale
   font-size: $ic-200;
 }
 
-.fs-300 {
-  font-size: $ic-300;
-}
-
 ...
+
+.fs-900 {
+  font-size: $ic-900;
+}
 
 .fs-1000 {
   font-size: $ic-1000;
