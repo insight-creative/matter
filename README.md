@@ -11,6 +11,12 @@ Building complex components from a set of utility classes. This SCSS framework l
 The goal is to reduce decision-making friction, by having a set of pre-defined utility classes we can focus on higher-order problems while increasing quality and consistency for Insight Creative’s customers.
 
 Table of contents
+- [Folder Structure](#folder-structure)
+    - [Components](#components)
+    - [Globals](#globals)
+    - [Layout](#layout)
+    - [Pages](#pages)
+    - [Utilities](#utilities)
 - [Design tokens](#design-tokens)
     - [Variables for visual consistency across platforms.](#variables-for-visual-consistency-across-platforms)
 - [Breakpoints](#breakpoints)
@@ -27,11 +33,33 @@ Table of contents
   - [Margin](#margin)
   - [Padding](#padding)
 - [Typography](#typography)
-  - [Headings sizes](#headings-sizes)
+  - [Heading sizes](#heading-sizes)
   - [How to use it:](#how-to-use-it)
   - [Body sizes](#body-sizes)
   - [How to use it:](#how-to-use-it-1)
 - [Adding Custom Styles](#adding-custom-styles)
+
+## Folder structure
+
+### Components
+
+Use this folder for any and all custom components you need to style for your project.
+
+### Globals
+
+This folder you rarely will need to touch outside of adjusting variables and typography at the start of a project. This folder contains the core of our formatting and layout classes. Here you will find classes ranging from general body styling, variables, colors, typography, to borders, flexbox, images, margin, padding and more. 
+
+### Layout
+
+This folder is similar to components, except instead of being on page components these are foundational layout elements like your header and footer.
+
+### Pages
+
+Use this folder to write styles rules on a page by page basis. This should only be used when you have a very specific problem to solve on that one page only.
+
+### Utilities
+
+This folder contains your utility classes. Similar to some of the files within our globals folder. The main difference is a utility, is a CSS class that does one job and does that one job well. These utilities more often than not—will have only one CSS property defined.
 
 ## Design tokens
 #### Variables for visual consistency across platforms.
@@ -242,6 +270,10 @@ How to use it:
 </div>
 ```
 
+## Flow
+
+The flow utility is a commonly used utility on every section that has text elements. Not always the case though, this applies to any elements that require space to separate them from the other elements that come before and after them. Flow is based on the Every Layout element [The Stack](https://every-layout.dev/layouts/stack/).
+
 ## Margin and padding
 
 Margin and padding can be applied to elements using a variety of pre-defined utility class with margin and padding set to match our rhythmic scale. All margin and padding classes follow the same naming convention.
@@ -312,11 +344,11 @@ How to use:
 
 A small number of text options based on our typography scale.
 
-### Headings sizes
+### Heading sizes
 
 The typography scale classes are based on design rather than HTML tags, decoupling HTML semantics from the style. This allows developers to choose the correct tag which adds semantic value rather than selecting based on the styles associated with the tag.
 
-Each heading level is defined with an associated class name. This way we can style an h3 like an h1 without using an <h1></h1> and break HTML semantics in our HTML markup.
+Each heading level is defined with an associated class name. This way we can style an h3 like an h1 without using an h1 and break HTML semantics in our HTML markup.
 
 ### How to use it:
 
@@ -367,8 +399,14 @@ Font size utility classes that are based on a typography scale
 
 ```
 
-## Adding Custom Styles
+## Adding custom styles
 
 Often the biggest challenge when working with a utility framework is figuring out what you’re supposed to do when there’s something you need that the framework doesn’t handle for you.
 
 This is where the components folder comes into play. Use this folder to add all components that need custom styles for your project.
+
+Components should use the [BEM naming methodology](https://getbem.com/naming/). This makes your CSS structure really simple and easy to understand and also makes these components easy to interchange from project to project. 
+
+## Adding custom utility classes
+
+Utility classes within the utility folder should be classes that have one specific purpose and one purpose only. To create a new utility in you project, create a new file within your utilities folder, then write your SCSS as needed. If it's a utility that you feel strongly about and can be used on all projects, commit it to this repo so we can take advantage of it. 
