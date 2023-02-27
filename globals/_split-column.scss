@@ -1,0 +1,21 @@
+.split-column {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: clamp($ic-300, 3vw, $ic-800);
+
+  .col {
+    flex: 1 1 500px;
+  }
+}
+
+.split-column--two-thirds {
+  .col--media {
+    flex: 1 1 700px;
+  }
+
+  .col--text {
+    flex: 1 1 300px;
+  }
+}
