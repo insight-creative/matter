@@ -10,6 +10,10 @@
   }
 }
 
+.split-column--reverse {
+  flex-direction: row-reverse;
+}
+
 .split-column--two-thirds {
   .col--media {
     flex: 1 1 700px;
