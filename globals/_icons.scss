@@ -1,73 +1,85 @@
-.icon {
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-}
-
-.icon-lg {
-  height: $ic-800;
-  width: $ic-800;
+.icon-sm {
+  inline-size: $ic-100;
+  block-size: $ic-100;
 
   svg {
-    width: $ic-600;
-    height: auto;
+    inline-size: 100%;
+    block-size: 100%;
   }
 }
 
 .icon-md {
-  height: $ic-600;
-  width: $ic-600;
+  inline-size: $ic-200;
+  block-size: $ic-200;
 
   svg {
-    width: $ic-300;
-    height: auto;
+    inline-size: 100%;
+    block-size: 100%;
   }
 }
 
-.icon-primary {
-  box-shadow: 0 5px 15px rgba($accent-color, .5);
+.icon-lg {
+  inline-size: $ic-400;
+  block-size: $ic-400;
 
   svg {
-    fill: $primary-color;
+    inline-size: 100%;
+    block-size: 100%;
   }
 }
 
-.icon-white {
-  box-shadow: 0 5px 15px rgba($primary-color, .5);
+.icon-fill-black {
+
+  svg {
+    fill: $black;
+  }
+}
+
+.icon-stroke-black {
+
+  svg {
+    stroke: $black;
+  }
+}
+
+.icon-fill-white {
 
   svg {
     fill: $white;
   }
 }
 
-.fill-primary {
-  fill: $primary-color;
+.icon-stroke-white {
+
+  svg {
+    stroke: $white;
+  }
 }
 
-.fill-secondary {
-  fill: $secondary-color;
+.icon-fill-primary {
+
+  svg {
+    fill: $primary-color;
+  }
 }
 
-.fill-black {
-  fill: $black;
+.icon-stroke-primary {
+
+  svg {
+    stroke: $primary-color;
+  }
 }
 
-.fill-white {
-  fill: $white;
+.icon-fill-secondary {
+
+  svg {
+    fill: $secondary-color;
+  }
 }
 
-.stroke-primary {
-  stroke: $primary-color;
-}
+.icon-stroke-secondary {
 
-.stroke-secondary {
-  stroke: $secondary-color;
-}
-
-.stroke-black {
-  stroke: $black;
-}
-
-.stroke-white {
-  stroke: $white;
+  svg {
+    stroke: $secondary-color;
+  }
 }
