@@ -1,34 +1,34 @@
 .wrapper {
-    width: 100%;
-    max-width: 63rem;
+    inline-size: 100%;
+    max-inline-size: 63rem;
     margin-inline: auto;
     padding-inline: $ic-300;
 }
 
 .wrapper-sm {
-    width: 100%;
-    max-width: 48rem;
+    inline-size: 100%;
+    max-inline-size: 48rem;
     margin-inline: auto;
     padding-inline: $ic-300;
 }
 
 .wrapper-md {
-    width: 100%;
-    max-width: 80rem;
+    inline-size: 100%;
+    max-inline-size: 80rem;
     margin-inline: auto;
     padding-inline: $ic-300;
 }
 
 .wrapper-lg {
-    width: 100%;
-    max-width: 100rem;
+    inline-size: 100%;
+    max-inline-size: 100rem;
     margin-inline: auto;
     padding-inline: $ic-300;
 }
 
 .wrapper-xl {
-    width: 100%;
-    max-width: 120rem;
+    inline-size: 100%;
+    max-inline-size: 120rem;
     margin-inline: auto;
     padding-inline: $ic-300;
 }

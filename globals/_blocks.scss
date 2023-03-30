@@ -4,11 +4,22 @@
 }
 
 .block-sm {
-    padding: $ic-300 0;
+    padding: 2% 0;
+    padding: clamp($ic-200, 5%, $ic-400) 0;
 }
 
 .block-md {
     padding: 3% 0;
     padding: clamp($ic-300, 5%, $ic-600) 0;
+}
+
+.block-lg {
+    padding: 4% 0;
+    padding: clamp($ic-400, 5%, $ic-800) 0;
+}
+
+.block-xl {
+    padding: 5% 0;
+    padding: clamp($ic-500, 5%, $ic-900) 0;
 }
   
