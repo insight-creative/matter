@@ -1,25 +1,15 @@
+// Great for a simple two column layout
+
 .split-column {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: clamp($ic-300, 3vw, $ic-800);
 
   .col {
-    flex: 1 1 450px;
-  }
-}
-
-.split-column--reverse {
-  flex-direction: row-reverse;
-}
-
-.split-column--two-thirds {
-  .col--media {
-    flex: 1 1 700px;
-  }
-
-  .col--text {
-    flex: 1 1 300px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    // Adjust this value depending on where you want your columns to break
+    flex-basis: 450px;
   }
 }
