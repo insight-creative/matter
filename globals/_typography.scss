@@ -65,6 +65,18 @@ p {
   margin: 0;
 }
 
+article {
+  * {
+    + h2 {
+      margin-top: 4rem;
+    }
+
+    + h3 {
+      margin-top: 2rem;
+    }
+  }
+}
+
 .i {
   font-style: italic;
 }
@@ -85,20 +97,24 @@ p {
   margin: 0;
 }
 
-.text-black {
+.text-color-black {
   color: $black;
   transition: $transition;
 }
 
-.text-white {
+.text-color-white {
   color: $white;
 }
 
-.text-primary {
+.text-color-primary {
   color: $primary-color;
 }
 
-.text-secondary {
+.text-color-secondary {
+  color: $secondary-color;
+}
+
+.text-color-accent {
   color: $secondary-color;
 }
 
@@ -118,60 +134,48 @@ p {
   font-weight: 700;
 }
 
-.fs-100 {
+.fw-900 {
+  font-weight: 900;
+}
+
+.font-size-xs {
   font-size: $ic-100;
 }
 
-.fs-200 {
+.font-size-sm {
   font-size: $ic-200;
 }
 
-.fs-300 {
+.font-size-md {
   font-size: $ic-300;
 }
 
-.fs-400 {
+.font-size-lg {
   font-size: $ic-400;
 }
 
-.fs-500 {
+.font-size-xl {
   font-size: $ic-500;
 }
 
-.fs-600 {
+.font-size-xxl {
   font-size: $ic-600;
 }
 
-.fs-700 {
+.font-size-xxxl {
   font-size: $ic-700;
 }
 
-.fs-800 {
-  font-size: $ic-800;
+.text-align-start {
+  text-align: start
 }
 
-.fs-900 {
-  font-size: $ic-900;
+.text-align-center {
+  text-align: center
 }
 
-.fs-1000 {
-  font-size: $ic-1000;
-}
-
-.text-center {
-  text-align: center;
-}
-
-@include breakpoint(sm) {
-  .text-center-s {
-    text-align: center;
-  }
-}
-
-@include breakpoint(md) {
-  .text-center-m {
-    text-align: center;
-  }
+.text-align-end {
+  text-align: end
 }
 
 address {

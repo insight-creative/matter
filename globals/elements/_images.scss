@@ -1,5 +1,4 @@
-img,
-iframe {
+img {
   display: block;
   max-inline-size: 100%;
   inline-size: 100%;
@@ -43,8 +42,4 @@ iframe {
   inline-size: 100%;
   block-size: 100%;
   object-fit: cover;
-}
-
-figure {
-  margin: 0;
 }

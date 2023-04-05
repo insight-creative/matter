@@ -1,13 +1,13 @@
-.wrapper {
+.wrapper-xs {
     inline-size: 100%;
-    max-inline-size: 63rem;
+    max-inline-size: 48rem;
     margin-inline: auto;
     padding-inline: $ic-100;
 }
 
 .wrapper-sm {
     inline-size: 100%;
-    max-inline-size: 48rem;
+    max-inline-size: 63rem;
     margin-inline: auto;
     padding-inline: $ic-100;
 }

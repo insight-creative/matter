@@ -1,14 +1,10 @@
 .columns {
     display: flex;
     flex-wrap: wrap;
-
+  
     .col {
-        flex-grow: 1;
-        flex-basis: 100%;
-
-        @include breakpoint(sm) {
-            flex-basis: 0;
-        }
+      flex-grow: 1;
+      flex-basis: calc(min(100%, 300px)); // Adjust the 300px value to your desired breakpoint if needed
     }
 }
 
@@ -16,14 +12,14 @@
     display: flex;
     flex-wrap: wrap;
 
-    @include breakpoint(sm) {
+    @media (min-width: 37.5em) {
         flex-wrap: nowrap;
     }
 
     .col:nth-of-type(1) {
         flex-basis: 100%;
 
-        @include breakpoint(sm) {
+        @media (min-width: 37.5em) {
             flex-basis: 33.33%;
         }
     }
@@ -31,7 +27,7 @@
     .col:nth-of-type(2) {
         flex-basis: 100%;
 
-        @include breakpoint(sm) {
+        @media (min-width: 37.5em) {
             flex-basis: 66.66%;
         }
     }

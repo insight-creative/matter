@@ -1,4 +1,5 @@
 .icon-sm {
+  display: block;
   inline-size: $ic-100;
   block-size: $ic-100;
 
@@ -9,6 +10,7 @@
 }
 
 .icon-md {
+  display: block;
   inline-size: $ic-200;
   block-size: $ic-200;
 
@@ -19,8 +21,31 @@
 }
 
 .icon-lg {
+  display: block;
+  inline-size: $ic-300;
+  block-size: $ic-300;
+
+  svg {
+    inline-size: 100%;
+    block-size: 100%;
+  }
+}
+
+.icon-xl {
+  display: block;
   inline-size: $ic-400;
   block-size: $ic-400;
+
+  svg {
+    inline-size: 100%;
+    block-size: 100%;
+  }
+}
+
+.icon-xxl {
+  display: block;
+  inline-size: $ic-500;
+  block-size: $ic-500;
 
   svg {
     inline-size: 100%;

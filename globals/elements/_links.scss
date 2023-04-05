@@ -9,10 +9,10 @@ a {
   }
 }
 
-.site-main a:not(.btn) {
+.site-main a:not(.btn, .breadcrumbs a, .social__icon, .category-list a, .card__categories, .pagination__numbers, .back, .categories, .post-navigation__link, .share-buttons__link) {
   color: $primary-color;
   text-decoration: none;
-  background-image: linear-gradient($accent-color, $accent-color),linear-gradient(270deg,$primary-color 0%,$primary-color 100%);
+  background-image: linear-gradient($secondary-color, $secondary-color),linear-gradient(270deg,$primary-color 0%,$primary-color 100%);
   background-size: 100% 2px,0 2px;
   background-position: 100% 100%,0 100%;
   background-repeat: no-repeat;
