@@ -4,7 +4,7 @@
   
     .col {
       flex-grow: 1;
-      flex-basis: calc(min(100%, 300px)); // Adjust the 300px value to your desired breakpoint if needed
+      flex-basis: min(100%, 300px); // Adjust the 300px value to your desired breakpoint if needed
     }
 }
 
