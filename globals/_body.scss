@@ -31,6 +31,7 @@ main:focus {
   outline: none;
 }
 
+// Add some margin top to our site main to ensure that our content doesn't sit underneath our hybrid fixed header
 .site-main {
   position: relative;
   margin-top: $mobile-header;

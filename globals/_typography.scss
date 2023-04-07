@@ -65,18 +65,6 @@ p {
   margin: 0;
 }
 
-article {
-  * {
-    + h2 {
-      margin-top: 4rem;
-    }
-
-    + h3 {
-      margin-top: 2rem;
-    }
-  }
-}
-
 .i {
   font-style: italic;
 }

@@ -1,3 +1,4 @@
+// Quickly and easily build equal width flexbox columns, great for two, three, four column layouts and could also be great for easily building gallery grids and more
 .columns {
     display: flex;
     flex-wrap: wrap;
@@ -8,6 +9,7 @@
     }
 }
 
+// Great for two column offset layouts. Note: this will only work with two column layouts.
 .columns-two-thirds-right {
     display: flex;
     flex-wrap: wrap;
